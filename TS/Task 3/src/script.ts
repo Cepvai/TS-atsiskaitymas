@@ -13,6 +13,9 @@ type TipasNaudoti = {
   kilometrazas: number
 };
 
+type dviratis = Pick<TipasNaudoti, 'metai' | 'spalva'>;
+type naujaMasina = Omit<TipasNaudoti, 'kilometrazas'>;
+type senaMasina = TipasNaudoti & {surudyjesDugnas: boolean};
 const dviratis = {
   metai: 1999,
   spalva: ''
@@ -29,5 +32,5 @@ const senaMasina = {
   metai: 2025,
   spalva: '',
   kilometrazas: 999999,
-  surudyjesDugnas: true  
+ // surudyjesDugnas: "ne" 
 };
